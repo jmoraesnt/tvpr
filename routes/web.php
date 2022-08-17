@@ -24,3 +24,7 @@ Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
